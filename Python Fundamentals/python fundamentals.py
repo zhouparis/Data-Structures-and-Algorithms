@@ -1,25 +1,15 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 1 Python Fundamentals Review
-# Due Date: 1/29/24
-# Description: This is the first assignment in CS261, it is a review of various python skills within 10 separate
-# problems.
+# Contact Email: zhou.paris00@gmail.com
+# Python Fundamentals
 
 import random
-from static_array import *
-
+from static_array import * 
 
 # ------------------- PROBLEM 1 - MIN_MAX -----------------------------------
 
 def min_max(arr: StaticArray) -> tuple[int, int]:
     """
-    This function takes a "StaticArray" object and finds the both the minimum and the maximum within the "StaticArray" object.
-    Each element within the object is compared to two variables "minimum" and "maximum."
-    If the element is greater than maximum, maximum is changed to the element.
-    If the element is smaller than minimum, minimum is changed to the element.
-    The function continues through the whole object and outputs a list within a tuple with the minimum and maximum.
-
+    This function takes a static array and finds the both the minimum and the maximum within the array iteratively.
     """
     minimum = arr.get(0)
     maximum = arr.get(0)
@@ -39,12 +29,9 @@ def min_max(arr: StaticArray) -> tuple[int, int]:
 
 def fizz_buzz(arr: StaticArray) -> StaticArray:
     """
-    This function takes a "StaticArray" object and creates a modified copy of it.
-    It checks if integers within the "StaticArray" object are divisible by 3 , 5, or both.
-    If an integer is divisible by 3 and only 3, it will replace the integer with the string "Fizz."
-    If an integer is divisible by 5 and only 5, it will replace the integer with the string "Buzz."
-    If an integer is divisible by both 3 and 5 it will be replaced by the string "FizzBuzz."
-    If an integer is not divisible by 3 or 5 then it will not be changed.
+    This function takes a static array of integers and creates a modified copy of it based on the divisibility of the items. 
+    Items divisible strictly by 3 print "fizz" instead, items divisible strictly by 5 print "buzz" instead, items divisible by both 3 and 5 print
+    "fizzbuzz" instead.  
     """
 
     # Create new array object
@@ -73,15 +60,13 @@ def fizz_buzz(arr: StaticArray) -> StaticArray:
 
 def reverse(arr: StaticArray) -> None:
     """
-    This function reverses the order of elements within the list of the "StaticArray" object.  It creates a temporary
-    number variable to store the element that the function is currently iterating on, then sets the current element's
-    index to the "opposite" element's value. Afterwards it sets the element "opposite" to the currently indexed
-    element to the current element.
+    This function reverses the inputted static array.
     """
     tempNum = None
     for index in range(arr.length() // 2):
         tempNum = arr.get(index)
-        arr.set(index, arr.get(arr.length() - 1 - index))
+        # Swap the item opposite to the current item, since length is 1-indexed, subtract 1 to convert to 0 indexed
+        arr.set(index, arr.get(arr.length() - 1 - index)) 
         arr.set(arr.length() - 1 - index, tempNum)
 
     pass
@@ -91,12 +76,8 @@ def reverse(arr: StaticArray) -> None:
 
 def rotate(arr: StaticArray, steps: int) -> StaticArray:
     """
-    The rotate function creates a new empty "StaticArray" object of the same length as the inputted object and
-    rotates the elements. The amount of places moved is determined by modding the inputted steps required by the
-    length of the array to find how many places an element must move. The function then reads from the inputted array
-    and adds each element offset by the places it must move. It handles the overflow by taking the index of the element
-    it's moving plus the places it must move modded by the length of the array. This gives the correct new position of
-    the element avoiding overflow.
+    The rotate function moves all elements in the array however many steps inputted. Negative shifts
+    elements left, positive shifts elements right.
     """
 
     new_arr = StaticArray(arr.length())
@@ -115,8 +96,8 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 
 def sa_range(start: int, end: int) -> StaticArray:
     """
-    The sa_range function creates an StaticArray object of a size equal to the distance between the given start and end
-    parameters. Depending on whether the sequence is descending or ascending the function iterates and fills the array.
+    The sa_range function creates a static array filled with numbers between the inputted starting and ending 
+    ranges. It can handle ascending and descending ranges. It can also handle negative numbers.
     """
     array = StaticArray(abs(end - start) + 1)
 
@@ -137,29 +118,29 @@ def sa_range(start: int, end: int) -> StaticArray:
 
 def is_sorted(arr: StaticArray) -> int:
     """
-    This function goes through the whole StaticArray object and determines if it is sorted based on a point system. If
-    two consecutive elements are ascending the truth value increases, if it is descending then it decreases. For it to be
-    strictly ascending the truth value must be equal to the length of the array at the end. If the truth value does not
-     equal the length of the array nor the negative length of the array then it is neither strictly ascending nor
-     descending. This function could be improved upon as there is no need to continue checking if the state of the
-     comparison changes. If the array did not follow a trend strictly increasing or decreasing it could return
-     immediately instead of checking the rest of the array.
+    This functions checks if the static array is sorted in a strictly ascending order or strictly descending order.
+    Strictly ascending returns 1, strictly descending returns -1. Unsorted and non-decreasing/non-ascending returns 0.
     """
-    truth = 0
-
-    for index in range(arr.length() - 1):
-
-        if arr.get(index) < arr.get(index + 1):
-            truth += 1
-        if arr.get(index) > arr.get(index + 1):
-            truth -= 1
-
-    if truth == arr.length() - 1:
+    if arr.length() == 1:
         return 1
-    if truth == -1 * (arr.length() - 1):
+    
+    if arr.get(0) < arr.get(1):
+        index = 0 
+        while index < arr.length()-1:
+            if arr.get(index) < arr.get(index+1):
+                index += 1
+            else:
+                return 0
+        return 1
+    
+    if arr.get(0) > arr.get(1):
+        index = 0 
+        while index < arr.length()-1:
+            if arr.get(index) > arr.get(index+1):
+                index += 1
+            else:
+                return 0
         return -1
-    else:
-        return 0
 
     pass
 

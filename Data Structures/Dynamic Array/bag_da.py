@@ -1,8 +1,7 @@
 # Name:Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 2: Dynamic Array and ADT Implementation
-# Due Date: 2/5/24
+# Contact Email: zhou.paris00@gmail.com
+# Data Structures
+# Bag ADT Implementation
 # Description: Below is an implementation of a Bag ADT, it is based on a dynamic array but does not share the exact
 # same methods. It has its own methods that allow adding elements, removing elements, counting elements, clearing
 # elements, and comparison of bags.
@@ -19,7 +18,6 @@ class Bag:
         self._da = DynamicArray()
 
         # populate bag with initial values (if provided)
-        # before using this feature, implement add() method
         if start_bag is not None:
             for value in start_bag:
                 self.add(value)
@@ -27,7 +25,6 @@ class Bag:
     def __str__(self) -> str:
         """
         Return content of stack in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         out = "BAG: " + str(self._da.length()) + " elements. ["
         out += ', '.join([str(self._da.get_at_index(_))
@@ -37,7 +34,6 @@ class Bag:
     def size(self) -> int:
         """
         Return total number of items currently in the bag
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return self._da.length()
 

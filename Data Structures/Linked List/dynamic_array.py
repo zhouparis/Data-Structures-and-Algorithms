@@ -1,8 +1,7 @@
-# Name:Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 2: Dynamic Array and ADT Implementation
-# Due Date: 2/5/24
+# Name: Paris Zhou
+# Email: zhou.paris00@gmail.com
+# Dynamic Array and ADT Implementation
+# Date: 2/5/24
 # Description: The below code is an implementation of a Dynamic array ADT in python. The dynamic array ADT
 # has a constructor with size, capacity, and data that contains a StaticArray object with the elements within the
 # dynamic array the dynamic array has similar methods to StaticArray where get_at_index() and set_at_index() are
@@ -16,7 +15,7 @@ from static_array import StaticArray
 class DynamicArrayException(Exception):
     """
     Custom exception class to be used by Dynamic Array
-    DO NOT CHANGE THIS CLASS IN ANY WAY
+     
     """
     pass
 
@@ -25,7 +24,7 @@ class DynamicArray:
     def __init__(self, start_array=None):
         """
         Initialize new dynamic array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._size = 0
         self._capacity = 4
@@ -40,7 +39,7 @@ class DynamicArray:
     def __str__(self) -> str:
         """
         Return content of dynamic array in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         out = "DYN_ARR Size/Cap: "
         out += str(self._size) + "/" + str(self._capacity) + ' ['
@@ -50,7 +49,7 @@ class DynamicArray:
     def __iter__(self):
         """
         Create iterator for loop
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._index = 0
         return self
@@ -58,7 +57,7 @@ class DynamicArray:
     def __next__(self):
         """
         Obtain next value and advance iterator
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         try:
             value = self[self._index]
@@ -72,7 +71,7 @@ class DynamicArray:
         """
         Return value from given index position
         Invalid index raises DynamicArrayException
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         if index < 0 or index >= self._size:
             raise DynamicArrayException
@@ -82,7 +81,7 @@ class DynamicArray:
         """
         Store value at given index in the array
         Invalid index raises DynamicArrayException
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         if index < 0 or index >= self._size:
             raise DynamicArrayException
@@ -92,7 +91,7 @@ class DynamicArray:
         """
         Same functionality as get_at_index() method above,
         but called using array[index] syntax
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self.get_at_index(index)
 
@@ -100,28 +99,28 @@ class DynamicArray:
         """
         Same functionality as set_at_index() method above,
         but called using array[index] syntax
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self.set_at_index(index, value)
 
     def is_empty(self) -> bool:
         """
         Return True is array is empty / False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._size == 0
 
     def length(self) -> int:
         """
         Return number of elements stored in array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._size
 
     def get_capacity(self) -> int:
         """
         Return the capacity of the array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._capacity
 
@@ -129,7 +128,7 @@ class DynamicArray:
         """
         Print information contained in the dynamic array.
         Used for testing purposes.
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         print(f"Length: {self._size}, Capacity: {self._capacity}, {self._data}")
 

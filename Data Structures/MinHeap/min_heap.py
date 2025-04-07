@@ -1,6 +1,5 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
+# Email: zhou.paris00@gmail.com
 # Assignment: Assignment 5 Minimum Heap implementation
 # Due Date: 3/4/24
 # Description: Minimum heap implementation, using a dynamic array, math, and iteration, we can make a heap.
@@ -15,7 +14,7 @@ from dynamic_array import *
 class MinHeapException(Exception):
     """
     Custom exception to be used by MinHeap class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
+     
     """
     pass
 
@@ -24,7 +23,7 @@ class MinHeap:
     def __init__(self, start_heap=None):
         """
         Initialize a new MinHeap
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._heap = DynamicArray()
 
@@ -37,7 +36,7 @@ class MinHeap:
     def __str__(self) -> str:
         """
         Return MH content in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         heap_data = [self._heap[i] for i in range(self._heap.length())]
         return 'HEAP ' + str(heap_data)

@@ -1,9 +1,5 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 1
-# Due Date:
-# Description:
+# Email: zhou.paris00@gmail.com
 
 
 from SLNode import SLNode
@@ -12,7 +8,7 @@ from SLNode import SLNode
 class StackException(Exception):
     """
     Custom exception to be used by Stack class
-    DO NOT CHANGE THIS METHOD IN ANY WAY
+      
     """
     pass
 
@@ -21,14 +17,14 @@ class Stack:
     def __init__(self) -> None:
         """
         Initialize new stack with head node
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._head = None
 
     def __str__(self) -> str:
         """
         Return content of stack in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         out = 'STACK ['
         if not self.is_empty():
@@ -43,14 +39,14 @@ class Stack:
     def is_empty(self) -> bool:
         """
         Return True is the stack is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._head is None
 
     def size(self) -> int:
         """
         Return number of elements currently in the stack
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         node = self._head
         length = 0

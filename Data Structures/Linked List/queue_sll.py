@@ -1,9 +1,5 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 1
-# Due Date:
-# Description:
+# Email: zhou.paris00@gmail.com
 
 
 from SLNode import SLNode
@@ -12,7 +8,7 @@ from SLNode import SLNode
 class QueueException(Exception):
     """
     Custom exception to be used by Queue class
-    DO NOT CHANGE THIS METHOD IN ANY WAY
+      
     """
     pass
 
@@ -21,7 +17,7 @@ class Queue:
     def __init__(self):
         """
         Initialize new queue with head and tail nodes
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._head = None
         self._tail = None
@@ -29,7 +25,7 @@ class Queue:
     def __str__(self):
         """
         Return content of queue in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         out = 'QUEUE ['
         if not self.is_empty():
@@ -44,14 +40,14 @@ class Queue:
     def is_empty(self) -> bool:
         """
         Return True is the queue is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._head is None
 
     def size(self) -> int:
         """
         Return number of elements currently in the queue
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         node = self._head
         length = 0

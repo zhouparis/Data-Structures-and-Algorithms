@@ -1,9 +1,5 @@
-
-
-
 # Top down approach for dna matching
 # Paris Zhou
-# CS 372
 
 def dna_match_topdown(DNA1, DNA2):
     # Dictionary initialized to memorize results
@@ -30,7 +26,6 @@ def recursive_helper(DNA1, DNA2, index1, index2, memoize):
 
 # Bottom up approach for dna matching
 # Paris Zhou
-# CS 372
 
 def dna_match_bottomup(DNA1,DNA2):
     dna1_length, dna2_length = len(DNA1), len(DNA2)

@@ -1,10 +1,7 @@
-# CS 325
-# Homework 4
 # Paris Zhou
 
 def powerset(input_set):
     """Wrapper function that calls the backtracking function"""
-
     # Create answer set that will be used by the backtracking algorithm to store calculated sets
     answer = []
     backtrack(input_set, [], answer)

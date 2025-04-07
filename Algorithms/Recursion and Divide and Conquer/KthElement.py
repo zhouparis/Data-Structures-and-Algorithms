@@ -1,6 +1,4 @@
 # Paris Zhou
-# CS 325
-# Assignment 2
 # Divide and Conquer
 
 def kthElement(arr1, arr2, k):

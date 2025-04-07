@@ -1,14 +1,6 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 1
-# Due Date:
-# Description:
-
-
-# Note: Changing any part of the pre-implemented methods (besides adding  #
-#       default parameters) will cause the Gradescope tests to fail.      #
-
+# Email: zhou.paris00@gmail.com
+# # Assignment: Assignment 1
 
 from static_array import StaticArray
 
@@ -16,7 +8,6 @@ from static_array import StaticArray
 class QueueException(Exception):
     """
     Custom exception to be used by Queue class.
-    DO NOT CHANGE THIS METHOD IN ANY WAY
     """
     pass
 
@@ -25,7 +16,7 @@ class Queue:
     def __init__(self) -> None:
         """
         Initialize new queue based on Static Array.
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._sa = StaticArray(4)
         self._front = 0
@@ -35,7 +26,7 @@ class Queue:
     def __str__(self) -> str:
         """
         Override string method to provide more readable output.
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
 
         size = self._current_size
@@ -54,28 +45,28 @@ class Queue:
     def is_empty(self) -> bool:
         """
         Return True if the queue is empty, False otherwise.
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._current_size == 0
 
     def size(self) -> int:
         """
         Return number of elements currently in the queue.
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._current_size
 
     def print_underlying_sa(self) -> None:
         """
         Print underlying StaticArray. Used for testing purposes.
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         print(self._sa)
 
     def _increment(self, index: int) -> int:
         """
         Move index to next position.
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
 
         # employ wraparound if needed
@@ -130,9 +121,6 @@ class Queue:
         return self._sa.get(self._front)
         pass
 
-    # The method below is optional, but recommended, to implement. #
-    # You may alter it in any way you see fit.                     #
-
     def _double_queue(self) -> None:
         """
         TODO: Write this implementation
@@ -156,7 +144,6 @@ class Queue:
 
 # ------------------- BASIC TESTING -----------------------------------------
 
-# ------------------- BASIC TESTING -----------------------------------------
 
 if __name__ == "__main__":
 

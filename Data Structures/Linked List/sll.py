@@ -1,10 +1,5 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 3
-# Due Date:
-# Description:
-
+# Email: zhou.paris00@gmail.com
 
 from SLNode import *
 
@@ -12,7 +7,7 @@ from SLNode import *
 class SLLException(Exception):
     """
     Custom exception class to be used by Singly Linked List
-    DO NOT CHANGE THIS CLASS IN ANY WAY
+     
     """
     pass
 
@@ -21,7 +16,7 @@ class LinkedList:
     def __init__(self, start_list=None) -> None:
         """
         Initialize new linked list
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._head = SLNode(None)
 
@@ -34,7 +29,7 @@ class LinkedList:
     def __str__(self) -> str:
         """
         Return content of singly linked list in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         out = 'SLL ['
         node = self._head.next
@@ -49,7 +44,7 @@ class LinkedList:
     def length(self) -> int:
         """
         Return the length of the linked list
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         length = 0
         node = self._head.next
@@ -61,7 +56,7 @@ class LinkedList:
     def is_empty(self) -> bool:
         """
         Return True is list is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return not self._head.next
 

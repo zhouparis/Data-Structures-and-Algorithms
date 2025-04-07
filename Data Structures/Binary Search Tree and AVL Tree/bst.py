@@ -1,8 +1,7 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 4, BST and AVL tree
-# Due Date: 2/26/24
+# Email: zhou.paris00@gmail.com
+# BST and AVL tree
+# 2/26/24
 # Description: Implementation of a binary search tree. It has multiple methods that allow it to add and remove nodes,
 # traverse the tree, and remove sub trees.
 
@@ -14,13 +13,12 @@ from queue_and_stack import Queue, Stack
 class BSTNode:
     """
     Binary Search Tree Node class
-    DO NOT CHANGE THIS CLASS IN ANY WAY
+     
     """
 
     def __init__(self, value: object) -> None:
         """
         Initialize a new BST node
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         self.value = value  # to store node's data
         self.left = None  # pointer to root of left subtree
@@ -29,7 +27,6 @@ class BSTNode:
     def __str__(self) -> str:
         """
         Override string method
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return 'BST Node: {}'.format(self.value)
 
@@ -42,7 +39,7 @@ class BST:
     def __init__(self, start_tree=None) -> None:
         """
         Initialize new Binary Search Tree
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._root = None
 
@@ -55,7 +52,7 @@ class BST:
     def __str__(self) -> str:
         """
         Override string method; display in pre-order
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         values = []
         self._str_helper(self._root, values)
@@ -64,7 +61,7 @@ class BST:
     def _str_helper(self, node: BSTNode, values: []) -> None:
         """
         Helper method for __str__. Does pre-order tree traversal
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         if not node:
             return
@@ -75,7 +72,7 @@ class BST:
     def get_root(self) -> BSTNode:
         """
         Return root of tree, or None if empty
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._root
 
@@ -89,7 +86,7 @@ class BST:
         A return of True from this method doesn't guarantee that your tree
         is the 'correct' result, just that it satisfies bst ordering.
 
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         stack = Stack()
         stack.push(self._root)

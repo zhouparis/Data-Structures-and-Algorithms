@@ -1,6 +1,4 @@
-# CS 325
 # Paris Zhou
-# Homework 8
 
 import copy
 

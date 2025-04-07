@@ -1,7 +1,5 @@
-import heapq
-
-# CS 325
 # Paris Zhou
+import heapq
 
 def Prims(G):
     """Prims(G) implements Prim's Algorithm for finding the minimum spanning tree (MST) of a graph.

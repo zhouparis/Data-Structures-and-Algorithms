@@ -1,4 +1,5 @@
-# Course:      CS261 - Data Structures
+# Name: Paris Zhou
+# Email: zhou.paris00@gmail.com
 # Assignment:  6
 # Description: Provided data structures necessary to complete the assignment.
 #              Please look through this file carefully to see what methods

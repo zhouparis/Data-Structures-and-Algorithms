@@ -1,9 +1,5 @@
-# Name:
-# OSU Email:
-# Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Name: Paris Zhou
+# Email: zhou.paris00@gmail.com
 
 
 from dynamic_array import *
@@ -12,7 +8,7 @@ from dynamic_array import *
 class StackException(Exception):
     """
     Custom exception to be used by Stack class
-    DO NOT CHANGE THIS METHOD IN ANY WAY
+      
     """
     pass
 
@@ -21,14 +17,14 @@ class Stack:
     def __init__(self):
         """
         Init new stack based on Dynamic Array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._da = DynamicArray()
 
     def __str__(self) -> str:
         """
         Return content of stack in human-readable form
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         out = "STACK: " + str(self._da.length()) + " elements. ["
         out += ', '.join([str(self._da[i]) for i in range(self._da.length())])
@@ -37,14 +33,14 @@ class Stack:
     def is_empty(self) -> bool:
         """
         Return True is the stack is empty, False otherwise
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._da.is_empty()
 
     def size(self) -> int:
         """
         Return number of elements currently in the stack
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         return self._da.length()
 

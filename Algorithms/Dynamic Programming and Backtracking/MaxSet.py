@@ -1,10 +1,7 @@
-# CS 325
-# Homework 4
 # Paris Zhou
 
 def max_independent_set(nums):
     """Function that finds the non consecutive set in a set of numbers that makes up the maximum sum"""
-
     # Edge case handling, array of size 1 and empty array
 
     if not nums:

@@ -1,3 +1,5 @@
+# Name: Paris Zhou
+# Contact Email: zhou.paris00@gmail.com
 # Static array dependency provided for my class that I used to program python fundamentals
 
 class StaticArrayException(Exception):

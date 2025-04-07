@@ -1,8 +1,7 @@
 # Name: Paris Zhou
-# OSU Email: zhoup@oregonstate.edu
-# Course: CS261 - Data Structures
-# Assignment: Assignment 4, BST and AVL tree
-# Due Date: 2/26/24
+# Email: zhou.paris00@gmail.com
+# BST and AVL tree
+# Date: 2/26/24
 # Description: Implementation of a binary search tree. It has multiple methods that allow it to add and remove nodes,
 # traverse the tree, and remove subtrees.
 
@@ -15,13 +14,11 @@ from bst import BSTNode, BST
 class AVLNode(BSTNode):
     """
     AVL Tree Node class. Inherits from BSTNode
-    DO NOT CHANGE THIS CLASS IN ANY WAY
     """
 
     def __init__(self, value: object) -> None:
         """
         Initialize a new AVL node
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         # call __init__() from parent class
         super().__init__(value)
@@ -33,7 +30,6 @@ class AVLNode(BSTNode):
     def __str__(self) -> str:
         """
         Override string method
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         return 'AVL Node: {}'.format(self.value)
 
@@ -46,7 +42,6 @@ class AVL(BST):
     def __init__(self, start_tree=None) -> None:
         """
         Initialize a new AVL Tree
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         # call __init__() from parent class
         super().__init__(start_tree)
@@ -54,7 +49,6 @@ class AVL(BST):
     def __str__(self) -> str:
         """
         Override string method
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         values = []
         super()._str_helper(self._root, values)
@@ -69,8 +63,6 @@ class AVL(BST):
         find any inconsistencies in the tree after the add() or remove()
         operations. Review the code to understand what this method is
         checking and how it determines whether the AVL tree is correct.
-
-        DO NOT CHANGE THIS METHOD IN ANY WAY
         """
         stack = Stack()
         stack.push(self._root)

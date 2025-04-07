@@ -13,7 +13,7 @@ class Bag:
     def __init__(self, start_bag=None):
         """
         Init new bag based on Dynamic Array
-        DO NOT CHANGE THIS METHOD IN ANY WAY
+          
         """
         self._da = DynamicArray()
 
